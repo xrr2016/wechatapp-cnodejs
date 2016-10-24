@@ -1,6 +1,6 @@
 {
   "pages":[
-    "pages/index/index",
+    "pages/topics/topics",
     "pages/logs/logs"
   ],
   "window":{
@@ -17,7 +17,7 @@
     "borderStyle":"white",
     "list":[
       {
-        "pagePath":"pages/index/index",
+        "pagePath":"pages/topics/topics",
         "text":"首页",
         "iconPath":"assets/tabBar/home.png",
         "selectedIconPath":"assets/tabBar/home_sel.png"

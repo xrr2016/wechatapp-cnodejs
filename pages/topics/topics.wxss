@@ -1,0 +1,5 @@
+.container{
+    background: #ccc;
+    height:100%;
+    text-align: center;
+}
