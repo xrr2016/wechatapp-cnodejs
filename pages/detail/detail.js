@@ -19,7 +19,7 @@ Page({
            url:Api.getTopicById(id,{mdrender:false}),
            success:function(res){
                console.info(res)
-               res.data.data.create_at = util.getDataDiff(new Date(res.data.data.create_at))
+               res.data.data.create_at = util.getDateDiff(new Date(res.data.data.create_at))
                res.data.data.replies = res.data.data.replies.map((item)=>{
                    item.create_at = util.getDateDiff(new Date(item.create_at))
                    return item
