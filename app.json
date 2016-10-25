@@ -2,8 +2,7 @@
   "pages":[
     "pages/topics/topics",
     "pages/detail/detail",
-    "pages/user/user",
-    "pages/postTopic/postTopic"
+    "pages/user/user"
   ],
   "window":{
     "backgroundTextStyle":"black",

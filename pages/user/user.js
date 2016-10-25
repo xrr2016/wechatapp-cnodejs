@@ -6,16 +6,28 @@ Page({
     loginname:"",
     createAt:"",
     avatar:"",
-    score:0,
+    score:null,
     topics:[],
-    name:'alsotang',
-    hidden:false
+    name:"i5ting",
+    hidden:false,
   },
-  onLoad:function(options){
-      this.getData()
+  onLoad:function(){
+      if(this.data.name){
+         this.getData() 
+      }else{
+         this.setData({
+              hidden:true
+          })
+      }
   },
   onPullDownRefresh:function(){
-      this.getData()
+    if(this.data.name){
+         this.getData() 
+      }else{
+         this.setData({
+              hidden:true
+          })
+      }
   },
   getData:function(){
       let self = this,
@@ -25,7 +37,6 @@ Page({
           url:url,
           success:function(res){
               let data = res.data.data
-              console.log(data)
               self.setData({
                 loginname:data.loginname,
                 createAt:data.create_at.slice(0,10),
@@ -33,7 +44,6 @@ Page({
                 score:data.score,
                 topics:data.recent_topics
               })
-              console.log(self.loginname)
               setTimeout(function(){
                     self.setData({
                         hidden:true
@@ -42,12 +52,11 @@ Page({
           }
       })
   },
-  postTopic:function(){
-      wx.redirectTo({
-          url:"/pages/postTopic/postTopic"
-      })
-  },
-  login:function(){
-
-  }
+   redirectDetail:function(e){
+        let id = e.currentTarget.id,
+            url = '../detail/detail?id='+id
+        wx.navigateTo({
+            url:url
+        })    
+    },
 })

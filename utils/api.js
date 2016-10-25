@@ -1,6 +1,7 @@
 'use strict'
 
 const  url = "https://cnodejs.org/api/v1",
+       signin = "https://cnodejs.org/signin",
        topics = "/topics",
        topic  = "/topic/",
        user   = "/user/" 
@@ -20,5 +21,6 @@ module.exports = {
     },
     getUser:function(name){
         return url+user+name
-    }
+    },
+    signin
 }

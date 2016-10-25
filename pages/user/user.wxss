@@ -11,6 +11,7 @@
     width: 100px;
     margin: 10px auto;
     border-radius: 6px;
+    border:1px solid #13beec;
 }
 .img{
     width: 100px;
@@ -26,7 +27,7 @@
     margin-top: 20px;
     margin-bottom: 40px;
     text-align: left;
-    text-indent: 112px;
+    text-indent: 100px;
     padding: 20px 0px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -39,7 +40,10 @@
     line-height: 20px;
     margin: 12px;
 }
-.post{
-    margin-top:12px;
-    background-color: silver;
+.topic-title{
+    line-height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 10px 0 0 12px;
+    color: #13beec;
 }
