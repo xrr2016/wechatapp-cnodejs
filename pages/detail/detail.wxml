@@ -10,10 +10,10 @@
         </view>
         <view class="detail-post-info">
             <view class="detail-post-author-name">{{detail.author.loginname}}</view>
-            <view class="detail-post-time">发表于 : {{detail.create_at}}</view>
+            <view class="detail-post-time">发表于:{{detail.create_at}}</view>
         </view>
         <view class="detail-post-content">
-            <text class="content-info">{{ detail.content }}</text>
+            <view class="content-info">{{ detail.content }}</view>
         </view>
         <view class="deatil-post-comment">
             <view class="detail-post-comment-title">评论</view>        
@@ -28,7 +28,7 @@
                     </view>
                     <view class="detail-comment-content">
                         <text class="detail-comment-text">{{item.content}}</text>                    
-                        <view class="detail-post-comment-time">{{index + 2 }}楼 发表于 : {{item.create_at}}</view>
+                        <view class="detail-post-comment-time">{{index + 2 }}楼 发表于:{{item.create_at}}</view>
                     </view>
                 </block>
             </view>

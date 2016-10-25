@@ -2,8 +2,9 @@
 
 const  url = "https://cnodejs.org/api/v1",
        topics = "/topics",
-       topic  = "/topic/"
-
+       topic  = "/topic/",
+       user   = "/user/" 
+       
 function obj2uri(obj){
     return Object.keys(obj).map(function(k){
         return encodeURIComponent(k) + "=" + encodeURIComponent(obj[k])
@@ -16,5 +17,8 @@ module.exports = {
     },
     getTopicById:function(id,obj){
         return url+topic+id+'?'+obj2uri(obj)
+    },
+    getUser:function(name){
+        return url+user+name
     }
 }

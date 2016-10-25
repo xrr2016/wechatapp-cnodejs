@@ -11,7 +11,6 @@ Page({
     },
     onPullDownRefresh:function(){
         this.fetchData()
-        console.info('下拉刷新',new Date())
     },
     onLoad:function(){
         this.fetchData()
@@ -62,7 +61,6 @@ Page({
         })
     },
     redirectDetail:function(e){
-        console.log('查看详情')
         let id = e.currentTarget.id,
             url = '../detail/detail?id='+id
         wx.navigateTo({

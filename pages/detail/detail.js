@@ -3,9 +3,9 @@ const util = require('../../utils/util.js')
 
 Page({
     data:{
-     title:'话题详情',
-    deatil:{},
-    hidden:false
+        title:'话题详情',
+        deatil:{},
+        hidden:false
     },
     onLoad:function(opts){
         this.fetchData(opts.id)
@@ -18,20 +18,19 @@ Page({
        wx.request({
            url:Api.getTopicById(id,{mdrender:false}),
            success:function(res){
-               console.info(res)
                res.data.data.create_at = util.getDateDiff(new Date(res.data.data.create_at))
-               res.data.data.replies = res.data.data.replies.map((item)=>{
-                   item.create_at = util.getDateDiff(new Date(item.create_at))
-                   return item
-               })
+               res.data.data.replies = res.data.data.replies.map(function(item){
+                       item.create_at = util.getDateDiff(new Date(item.create_at))
+                       return item
+                   })
                self.setData({
                    detail:res.data.data
                })
-               setTimeout(()=>{
-                   self.setData({
-                       hideen:true
-                   })
-               },300)
+              setTimeout(function(){
+                    self.setData({
+                        hidden:true
+                    })
+                },300)
            }
        }) 
     }

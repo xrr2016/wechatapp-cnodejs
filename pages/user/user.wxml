@@ -1,0 +1,18 @@
+<view class="box">
+   <view class="user-avatar">
+     <image src="{{user.avatar}}" class="img"></image>
+   </view>
+
+   <view class="user-info">
+        <text class="user-loginname">ID:{{user.loginname}}aaa</text>
+        <text class="createAt">创建于:{{user.createAt}}bbb</text>
+        <text class="score">分数:{{user.score}}000</text>
+   </view>
+   <view class="topics" wx:for="{{user.topics}}">
+        <view class="title">{{topics.title}}</view>
+   </view>
+    <button type="primary" size="default" form-type="submit" bindtap="postTopic">发帖</button>
+   <loading hidden="{{hidden}}">
+    Loading...
+   </loading>
+</view>

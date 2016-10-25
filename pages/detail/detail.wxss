@@ -12,9 +12,9 @@
 .detail-post-title {
   margin: 0;
   padding: 0;
-  font-weight: 400;
-  font-size: 29px;
-  color: #80bd01;
+  font-weight: 200;
+  font-size: 24px;
+  color: #13beec;
 }
 .detail-post-meta {
   position: relative;
@@ -59,10 +59,10 @@
 }
 .content-info {
   color: #6c6c6c;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 20px;
   word-wrap: break-word;
-  padding: 0;
+  padding: 4px;
 }
 .detail-post-comment {
   background-color: #fff;
